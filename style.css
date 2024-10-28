@@ -7,7 +7,7 @@
 .header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     background-color: green;
 }
@@ -17,5 +17,18 @@
     height: auto;
     border-radius: 100px;
     box-shadow: 100px;
-    margin-right: 450px;
+}
+.link_container nav{
+    display: flex;
+    gap: 1.5rem;
+}
+.link_container nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.link_container nav a:hover {
+    color: #ffd700;
 }
