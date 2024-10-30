@@ -58,3 +58,25 @@ body{
     color: #ffd700;
 }
 /* close fonticon bar */
+
+/* image header */
+.image_header{
+    display: flex;
+    gap: 10px;
+}
+.img1 img{
+    width: 500px;
+}
+.img2 img{
+    width: 500px;
+}
+.img3 img{
+    width: 465px;
+}
+.img4 img{
+    height: 275px;
+}
+.img5 img{
+    width: 415px
+}
+
