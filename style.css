@@ -60,49 +60,36 @@ body{
 /* close fonticon bar */
 
 /* image header */
-.carousel {
-    position: absolute;
-    width:300px ;
-    max-width: 100px;
-    margin: auto;
-}
-
-.carousel-inner {
+.marquee-carousel {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f3f3f3; /* Optional background */
     display: flex;
-    animation: slide 10s infinite;
-    transition: transform 0.5s ease;
-    width: calc(100% * 5);
+    align-items: center;
+}
+.carousel-track {
+    display: flex;
+    animation: scroll 90s linear infinite;
+}
+.carousel-track img {
+    width: 500px; /* Adjust size of images */
+    margin-right: 10px; /* Optional space between images */
 }
 
-.carousel-item {
-    width: 100%;
-    flex-shrink: 0;
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-.carousel-item img {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
-}
-.carousel-item:hover img {
-    transform: translateX(10px);
-
-/* Slide animation */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(0); }
-    25% { transform: translateX(-100%); }
-    45% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    70% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    95% { transform: translateX(-300%); }
-    100% { transform: translateX(-400%); }
+/* Pause on hover */
+.marquee-carousel:hover .carousel-track {
+    animation-play-state: paused;
 }
 
-/* Pause animation on hover */
-.carousel-inner:hover {
-    animation-play-state: ;
-}
 
 
